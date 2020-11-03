@@ -1,0 +1,24 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+
+    - name: Install Dependencies
+      run: |
+        sudo apt install -y pandoc
+
+    - name: Build
+      run: |
+        mkdir build
+        cd build
+        pandoc -o ../src/resume.pdf resume.md
+
+    - name: Run tests
+      run: |
+        test -f resume.pdf
