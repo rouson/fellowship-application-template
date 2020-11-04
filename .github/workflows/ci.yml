@@ -11,7 +11,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        sudo apt install -y pandoc texlive-base texlive-fonts-recommended
+        sudo apt install -y pandoc texlive-base texlive-fonts-recommended ispell
 
     - name: Build
       run: |
@@ -21,6 +21,10 @@ jobs:
     - name: Check Built
       run: |
         test -f build/resume.pdf
+
+    - name: Check Spelling
+      run: |
+        ! $(ispell -a < src/resume.md | grep -q \&)
 
     - name: Save PDF
       uses: actions/upload-artifact@v2
@@ -34,6 +38,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v1
 
+    - name: Install Dependencies
+      run: |
+        sudo apt install -y ispell
+
     - name: Check Long Enough
       run: |
         test $(wc -m src/goals.txt | cut -d " " -f 1) -ge 2500
@@ -42,11 +50,19 @@ jobs:
       run: |
         test $(wc -m src/goals.txt | cut -d " " -f 1) -le 5000
 
+    - name: Check Spelling
+      run: |
+        ! $(ispell -a < src/goals.txt | grep -q \&)
+
   Test-Interest:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v1
+
+    - name: Install Dependencies
+      run: |
+        sudo apt install -y ispell
 
     - name: Check Long Enough
       run: |
@@ -55,3 +71,7 @@ jobs:
     - name: Check Not Too Long
       run: |
         test $(wc -m src/interest.txt | cut -d " " -f 1) -le 5000
+
+    - name: Check Spelling
+      run: |
+        ! $(ispell -a < src/interest.txt | grep -q \&)
