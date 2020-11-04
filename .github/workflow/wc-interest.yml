@@ -11,8 +11,8 @@ jobs:
 
     - name: Check Long Enough
       run: |
-        test $(wc src/interest.txt | cut -d " " -f 1) -ge 2500
+        test $(wc -m src/interest.txt | cut -d " " -f 1) -ge 2500
 
     - name: Check Not Too Long
       run: |
-        test $(wc src/interest.txt | cut -d " " -f 1) -le 5000
+        test $(wc -m src/interest.txt | cut -d " " -f 1) -le 5000
