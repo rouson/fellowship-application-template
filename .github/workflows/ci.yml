@@ -24,7 +24,7 @@ jobs:
 
     - name: Check Spelling
       run: |
-        ! $(ispell -a < src/resume.md | grep -q \&)
+        ! $(pandoc -t latex src/resume.md | ispell -p ispell_dictionary.txt -t -a | grep -q '^#\|^&')
 
     - name: Save PDF
       uses: actions/upload-artifact@v2
@@ -52,7 +52,7 @@ jobs:
 
     - name: Check Spelling
       run: |
-        ! $(ispell -a < src/goals.txt | grep -q \&)
+        ! $(ispell -p ispell_dictionary.txt -a < src/goals.txt | grep -q '^#\|^&')
 
   Test-Interest:
     runs-on: ubuntu-latest
@@ -74,4 +74,4 @@ jobs:
 
     - name: Check Spelling
       run: |
-        ! $(ispell -a < src/interest.txt | grep -q \&)
+        ! $(ispell -p ispell_dictionary.txt -a < src/interest.txt | grep -q '^#\|^&')
