@@ -5,6 +5,8 @@
 Fellowship Application
 ======================
 
+[![University of California, Merced Mascot][ucm mascot]](https://ucmerced.edu)
+
 Let's get funding!
 
 CONTENTS
@@ -44,8 +46,4 @@ Professional Experiences
 ------------------------
 * [ ] Create a resume or CV in GitHub-flavored Markdown.
 
-
-[![University of California, Merced Mascot][ucm mascot]](https://marketing.ucmerced.edu/sites/marketing.ucmerced.edu/files/images/primary-bobcat-leaping-mark-1200x1200.png)
-
-
-[ucm mascot]: https://marketing.ucmerced.edu/sites/marketing.ucmerced.edu/files/images/primary-bobcat-leaping-mark-1200x1200.png
+[ucm mascot]: ucmerced_mascot.png
