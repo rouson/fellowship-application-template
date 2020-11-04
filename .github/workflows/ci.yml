@@ -21,6 +21,9 @@ jobs:
     - name: Check Built
       run: |
         test -f build/resume.pdf
+
+    - name: Save PDF
+      uses: actions/upload-artifact@v2
       with:
         name: resume
         path: build
