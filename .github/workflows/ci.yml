@@ -11,7 +11,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        sudo apt install -y pandoc
+        sudo apt install -y pandoc texlive-latex-base
 
     - name: Build
       run: |
