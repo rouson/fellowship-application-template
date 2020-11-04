@@ -1,4 +1,4 @@
-name: CI
+name: Render Resume
 
 on: [push, pull_request]
 
@@ -16,10 +16,8 @@ jobs:
     - name: Build
       run: |
         mkdir build
-        cd build
-        pandoc -o resume.pdf ../src/resume.md
+        pandoc -o build/resume.pdf src/resume.md
 
-    - name: Run tests
+    - name: Check Built
       run: |
-        cd build
-        test -f resume.pdf
+        test -f build/resume.pdf
