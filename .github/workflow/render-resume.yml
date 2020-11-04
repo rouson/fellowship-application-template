@@ -17,8 +17,9 @@ jobs:
       run: |
         mkdir build
         cd build
-        pandoc -o ../src/resume.pdf resume.md
+        pandoc -o resume.pdf ../src/resume.md
 
     - name: Run tests
       run: |
+        cd build
         test -f resume.pdf
