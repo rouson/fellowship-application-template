@@ -21,6 +21,9 @@ jobs:
     - name: Check Built
       run: |
         test -f build/resume.pdf
+      with:
+        name: resume
+        path: build
 
   Test-Goals:
     runs-on: ubuntu-latest
