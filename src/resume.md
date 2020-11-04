@@ -11,9 +11,9 @@ London
 
 ## Work Experience
 
-* Planet Vogon Bueracracy (2019-2020)
+* Planet Vogon Bureaucracy (2019-2020)
   - File clerk
 * Planet Express (3000-3001)
   - Delivery Person
 
-## Extracuricalars
+## Extracurricular Activities
