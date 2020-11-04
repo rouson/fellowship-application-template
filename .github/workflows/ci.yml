@@ -11,7 +11,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        sudo apt install -y pandoc texlive-latex-base
+        sudo apt install -y pandoc texlive-base texlive-fonts-recommended
 
     - name: Build
       run: |
