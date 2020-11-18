@@ -6,6 +6,7 @@ Fellowship Application
 ======================
 
 [![University of California, Merced Mascot][ucm mascot]](https://ucmerced.edu)
+[![San Diego State University, SDSU Mascot][sdsu mascot]](https://sdsu.edu)
 
 Let's get funding!
 
@@ -47,3 +48,4 @@ Professional Experiences
 * [ ] Create a resume or CV in GitHub-flavored Markdown.
 
 [ucm mascot]: ucmerced_mascot.png
+[sdsu mascot]: https://sayvasolutions.com/wp-content/uploads/2017/11/SDSU.png
