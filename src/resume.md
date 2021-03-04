@@ -2,7 +2,7 @@
 
 867-5309
 220B Baker St.
-London
+London, United Kingdom
 
 ## Education
 
@@ -17,3 +17,5 @@ London
   - Delivery Person
 
 ## Extracurricular Activities
+
+* Sorcery
